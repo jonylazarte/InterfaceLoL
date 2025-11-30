@@ -2,7 +2,6 @@ import './index.css'
 import { lazy, Suspense } from 'react';
 const  PokemonSelection = lazy(() => import('@/pages/PokemonSelection/index.jsx'));//import PokemonSelection from '../PokemonSelection/index.jsx'
 const  ModeSelection = lazy(() => import('@/pages/ModeSelection/modeSelection.jsx'));//import ModeSelection from '../ModeSelection/modeSelection.jsx'
-const  MatchVsIa = lazy(() => import('@/pages/IaMatch/IaMatch.jsx'));//import MatchVsIa from '../IaMatch/IaMatch.jsx'
 const  Bag = lazy(() => import('@/pages/Bag/bag.jsx'));//import Bag from '../Bag/bag.jsx'
 const  Store = lazy(() => import('@/pages/Store/store.jsx'));//import Store from '../Store/store.jsx'
 import RightNav from '@/components/rightNav/rightNav.jsx'
@@ -17,7 +16,6 @@ import {useRouter} from 'next/navigation'
 import { setUser, setUserMessages } from '@/redux/slices/userSlice.js'
 import { selectUserInterfaceData, setActualSection, setUserState } from '@/redux/slices/userInterfaceSlice.js'
 import { getUserPokemon, selectUserPokemonData } from '@/redux/slices/userPokemonSlice.js'
-import { getUserItems, selectUserItemsData } from '@/redux/slices/userItemsSlice.js'
 import { useSelector, useDispatch } from 'react-redux'
 import {Riple} from 'react-loading-indicators'
 
@@ -43,7 +41,6 @@ export default function Index({setToken}){
     const user = useSelector((state) => state.user);
     const { actualSection, userState } = useSelector(selectUserInterfaceData)
     const {loading : userPokemonLoading, userPokemon, error : userPokemonError} = useSelector(selectUserPokemonData);
-    const {loading : userItemsLoading, userItems, error : userItemsError} = useSelector(selectUserItemsData);
 
     const indexElementStyle = /*{!showSideNav ? {paddingRight: "0px"} : (userState === 'In explore match' || userState === 'In normal match') ? {paddingTop: '0px'} : null}*/
     { paddingRight: !showSideNav || userState === 'In explore match' ? `0px` : null,
