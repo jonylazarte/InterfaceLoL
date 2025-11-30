@@ -7,7 +7,7 @@ import {useRouter} from 'next/navigation'
 import { BsSearch } from "react-icons/bs"
 import { FaCheck } from "react-icons/fa6";
 import UseNearScreen from '../../services/UseNearScreen.js'
-import ToolTip from '@/components/Tooltip/ToolTip.jsx';
+import ToolTip from '@/components/ToolTip/ToolTip.jsx';
 import ChampionDetailModal from '../../components/ChampionDetailModal/ChampionDetailModal.jsx';
 import CustomSelect from '../../components/CustomSelect/CustomSelect.jsx';
 
