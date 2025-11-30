@@ -1,0 +1,605 @@
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[12].use[3]!./src/pages/CollectionSkins/CollectionSkins.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************/
+.collection-skins-section {
+	height: 80vh;
+	width: 100;
+	padding-left: 2.5vw;
+ 	margin-top: 3.3vh;
+	display: flex;
+	flex-direction: row;
+	--total-skins-width: 10.5vw;
+}
+.skins-panel {
+	width: 15.2vw;
+	margin-right: 3.8vw;
+	padding-top: 9vh;
+}
+.skins-panel-stats {
+	width: 100%;
+	margin-bottom: 2vh;
+	position: relative;
+}
+.hextech-rounded-border {
+	position: absolute;
+	top: -40%;
+	width: var(--total-skins-width);
+	place-self: center;
+}
+.total-skins-info {
+	position: absolute;
+	top: -40%;
+	width: var(--total-skins-width);
+	place-self: center;
+	align-items: center;
+	justify-content: flex-end;
+	align-content: center;
+	text-align: center;
+	height: var(--total-skins-width);
+	display: flex;
+	flex-direction: column;
+	padding: 0 1vw;
+}
+.total-skins-info .description {
+	margin-top: 1.5vh;
+	line-height: 1.3;
+	color: var(--grey-three);
+}
+.cls-1 {
+	stroke-width: 2px;
+}
+.cls-2 {
+	fill: none;
+	stroke-width: 3px;
+	stroke: var(--gold-six);
+}
+.cls-3 {
+	fill: var(--blue-five);
+	stroke-width: 1px;
+	stroke: var(--gold-six);
+}
+.skins-hextech-border {
+	width: 99%;
+	align-self: self-end;
+	justify-self: self-end;
+}
+.rarity-icons-container {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 0.7vw;
+
+}
+.rarity-icons {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-end;
+	height: 8vh;
+	border-bottom: 1px solid rgb(80, 80, 80);
+	padding: 0vw 0.5vw;
+	padding-bottom: 2.1vh;
+}
+.rarity-item {
+	color: var(--grey-three);
+	font-size: 0.75rem;
+	text-align: center;
+}
+
+.rarity-image {
+	width: 20px;
+	cursor: pointer;
+	margin-bottom: 1.1vh;
+}
+.legacy-chromas-icons {
+	height: 9.5vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 20px;
+	align-content: center;
+	align-items: center;
+	padding-top: 1.5vh;
+	color: var(--grey-three);
+	font-size: 0.75rem;
+	padding-bottom: 5%;
+}
+.chroma-item, .legacy-item {
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+.collection-skins-section .search-filter {
+	background: black;
+	cursor: default;
+}
+.collection-skins-section .checkbox:hover {
+	background: unset;
+}
+.checkbox-container {
+	height: 10.3vh;
+	display: flex;
+	align-content: flex-start;
+	justify-content: flex-start;
+}
+
+
+
+
+
+
+.skins-grid-container {
+	flex-grow: 1;
+	overflow: scroll;
+	padding-right: 2vw;
+}
+.skins-section {
+	padding-bottom: 3.9vh;
+}
+.skins-section h1{
+    font-family: Bold;
+    color: var(--color-secundary);
+    line-height: 1;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+.skins-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(17vh, 1fr));
+	grid-gap: 3.1vh;
+	row-gap: 4vh;
+	width: 100%;
+	height: 100%;
+}
+.skin-card {
+	width: 100%;
+	height: 100%;
+	height: 26vh;
+	position: relative;
+	border: 1px solid var(--gold-five);
+	border-radius: 16px;
+	cursor: pointer;
+}
+.skin-card:hover .skin-card-image {
+	filter: brightness(1);
+}
+.skins-section .skin-card-image {
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	   object-fit: cover;
+	border-radius: 16px;
+	filter: brightness(0.8);
+}
+.skin-card-rarity-image {
+	width: 25px;
+	position: absolute;
+	place-self: center;
+}
+
+.skin-card.not-obtained {
+	border: 0px;
+	border-radius: 0px;
+}
+.skin-card-image.not-obtained {
+	filter: brightness(0.5);
+	border-radius: 0;
+}
+
+.skin-card.not-obtained:hover .skin-card-image{
+	filter: brightness(0.8);
+}
+
+
+
+
+
+@media (max-width: 767px) {
+	.collection-skins-section {
+		flex-direction: column;
+		margin-top: 0;
+		padding-right: 2.5vw;
+		--total-skins-width: 30vw;
+		height: var(--dashboard-content-height-mobile);
+	}
+	.skins-panel {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		margin-right: 3.8vw;
+		margin-bottom: 1vh;
+		padding-top: 6.5vh;
+		justify-content: space-between;
+	}
+	.left-place {
+		width: 50%;
+	}
+	.right-place{
+		width: 47%;
+	}
+	.skins-panel-stats{
+
+	}
+	.hextech-rounded-border {
+		top: -35%;
+	}
+	.total-skins-info {
+		top: -35%;
+	}
+	.total-skins-info .description {
+		margin-top: 0;
+		color: var(--grey-three);
+	}
+	.rarity-icons {
+		height: 8vh;
+		padding: 0vw 1.5vw;
+		padding-bottom: 2.1vh;
+	}
+	.rarity-item {
+		font-size: 0.65rem;
+		text-align: center;
+	}
+
+	.rarity-image {
+		width: 15px;
+		cursor: pointer;
+		margin-bottom: 1.1vh;
+	}
+	.legacy-chromas-icons {
+		height: 9.5vh;
+		gap: 15px;
+		padding-top: 1.5vh;
+		font-size: 0.65rem;
+		padding-bottom: 5%;
+	}
+	.collection-skins-section .search-filter {
+		font-size: 0.7rem;
+	}
+	.skins-section {
+	padding-bottom: 1vh;
+	}
+	.skins-section h1{
+	    line-height: 1;
+	    font-size: 0.9rem;
+	    margin-left: 1vw;
+	    letter-spacing: 1px;
+	}
+	.skins-grid-container {
+		padding: 2vw;
+	}
+	.skins-grid {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(12vh, 1fr));
+		grid-gap: 3.1vw;
+		row-gap: 4vh;
+		width: 100%;
+		height: 100%;
+	}
+	.skin-card {
+		width: 100%;
+		height: 100%;
+		height: 20vh;
+		position: relative;
+		border: 1px solid var(--gold-five);
+		border-radius: 0px;
+		cursor: pointer;
+	}
+
+	.skins-section .skin-card-image {
+		width: 100%;
+		height: 100%;
+		-o-object-fit: cover;
+		   object-fit: cover;
+		border-radius: 0px;
+		filter: brightness(0.8);
+	}
+	.skin-card-rarity-image {
+		width: 20px;
+		position: absolute;
+		place-self: center;
+	}
+	.checkbox-container .checkbox{
+		font-size: 0.6rem;
+	}
+	.checkbox-container .custom-checkbox{
+		height: 12px;
+		width: 12px;
+	}
+	.skins-panel .search-filter{
+		margin-bottom: 0;
+	}
+
+}
+/*!************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[12].use[3]!./src/components/Tooltip/skinTooltip/skinTooltip.css ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************/
+.skin-tooltip {
+	background: var(--blue-six);
+	width: 23vw;
+	border: 2px solid;
+	-o-border-image: linear-gradient(to bottom, var(--gold-six), var(--gold-five)) 1;
+	   border-image: linear-gradient(to bottom, var(--gold-six), var(--gold-five)) 1;
+	padding: 1vw 1.5vw;
+	z-index: 5;
+}
+.tooltip-header {
+	width: 100%;
+	padding-top: 0.5vh;
+	padding-bottom: 2vh;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	border-bottom: 1px solid var(--gold-five);
+	position: relative;
+	justify-content: center;
+}
+.tooltip-skin-name {
+	font-size: 1rem;
+	color: var(--color-secundary);
+	font-family: 'Bold';
+	text-transform: uppercase;
+	text-align: center;
+	width: 85%;
+	line-height: 1.1;
+}
+.tooltip-rarity-icon {
+	width: 17px;
+	position: absolute;
+	left: 0;
+}
+.purchase-date-chroma-section {
+	width: 100%;
+	color: var(--gold-four);
+	font-size: 0.75rem;
+	display: flex;
+	align-items: center;
+	align-content: center;
+	text-align: center;
+	justify-content: center;
+	height: 6vh;
+	padding-top: 1vh;
+	position: relative;
+}
+.chroma-icon {
+	width: 28px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.purchase-date-chroma-section .rp-icon{
+	width: 21px;
+	height: 21px;
+}
+.rp-price {
+	font-size: 0.8rem;
+}
+/*!******************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[12].use[3]!./src/components/CustomSelect/CustomSelect.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************/
+/* CustomSelect Styles */
+.custom-select {
+  position: relative;
+  display: inline-block;
+  font-family: inherit;
+  margin-bottom: 1vh;
+  width: 100%;
+  height: 4.4vh;
+  background: var(--blue-four);
+  font-size: 0.8rem;
+  font-family: "Spiegel-Regular";
+}
+
+.custom-select-trigger {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.3s ease, border 0s;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding-right: 10px;
+  padding-left: 1vw;
+  height: 100%;
+  border: 1px solid;
+  -o-border-image: linear-gradient(to bottom, #C8AA6E, var(--gold-four), #785A28) 1;
+     border-image: linear-gradient(to bottom, #C8AA6E, var(--gold-four), #785A28) 1;
+
+
+}
+
+.custom-select-trigger:hover {
+  background: linear-gradient(var(--blue-five), var(--blue-four) /*#C8AA6E*/, var(--gold-seven));
+  -o-border-image: linear-gradient(to bottom, #F0E6D2, #C8AA6E, #C89B3C) 1;
+     border-image: linear-gradient(to bottom, #F0E6D2, #C8AA6E, #C89B3C) 1;
+}
+
+.custom-select.open .custom-select-trigger {
+  border: 1px solid var(--gold-six);
+}
+.custom-select.open .custom-select-trigger:hover {
+  background: var(--blue-four);
+}
+.custom-select-value {
+  flex: 1;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.8rem;
+}
+
+.custom-select-arrow {
+  margin-left: 12px;
+  font-size: 12px;
+  color: var(--gold-five);
+  transition: transform 0.3s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.custom-select-arrow.open {
+  transform: rotate(180deg);
+
+}
+
+.custom-select-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  border-top: none;
+  /*max-height: 200px;*/
+  overflow-y: auto;
+  animation: dropdownFadeIn 0.2s ease-out;
+  background: black;
+  border: 1px solid ;
+  -o-border-image: linear-gradient(to bottom, var(--gold-six), var(--gold-six), var(--gold-five)) 1;
+     border-image: linear-gradient(to bottom, var(--gold-six), var(--gold-six), var(--gold-five)) 1;
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.custom-select-option {
+  padding: 1vh 12px;
+  cursor: pointer;
+  color: var(--color-primary);
+  font-size: 0.8rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.custom-select-option:last-child {
+  border-bottom: none;
+}
+
+.custom-select-option:hover,
+.custom-select-option.highlighted {
+  background: var(--blue-six);
+}
+
+.custom-select-option.selected {
+  /*color: #fff;
+  font-weight: 600;
+  background: green;*/
+}
+
+.custom-select-option.selected:hover,
+.custom-select-option.selected.highlighted {
+  /*background: red;*/
+}
+
+/* Disabled state */
+.custom-select.disabled .custom-select-trigger {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border-color: #333;
+  color: #666;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.custom-select.disabled .custom-select-trigger:hover {
+
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.custom-select.disabled .custom-select-arrow {
+  color: #444;
+}
+
+/* Scrollbar styling for dropdown */
+.custom-select-dropdown::-webkit-scrollbar {
+  width: 6px;
+  display: none;
+}
+
+.custom-select-dropdown::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.custom-select-dropdown::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+.custom-select-dropdown::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .custom-select-trigger {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+  
+  .custom-select-option {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+}
+
+/* Custom themes - puedes agregar más variantes */
+.custom-select.theme-dark {
+  /* Ya es el tema por defecto */
+}
+
+.custom-select.theme-light .custom-select-trigger {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-color: #dee2e6;
+  color: #212529;
+}
+
+.custom-select.theme-light .custom-select-trigger:hover {
+  background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+  border-color: #adb5bd;
+}
+
+.custom-select.theme-light .custom-select-dropdown {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-color: #dee2e6;
+}
+
+.custom-select.theme-light .custom-select-option {
+  color: #212529;
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+
+.custom-select.theme-light .custom-select-option:hover,
+.custom-select.theme-light .custom-select-option.highlighted {
+  background: linear-gradient(135deg, #007acc 0%, #005a9e 100%);
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .custom-select-value {
+    font-size: 0.6rem;
+  }
+  .custom-select-option {
+  padding: 1vh 12px;
+  cursor: pointer;
+  color: var(--color-primary);
+  font-size: 0.6rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+}

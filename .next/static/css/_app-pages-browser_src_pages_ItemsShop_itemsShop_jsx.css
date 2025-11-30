@@ -1,0 +1,696 @@
+/*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[12].use[3]!./src/pages/ItemsShop/itemsShop.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************/
+@keyframes appearance {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.items-section{
+	display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: space-between;
+    flex-grow: 1;
+    padding-left: 2.75vw;
+    padding-right: 0.2vw;
+    margin-top: 5.6vh;
+    overflow: hidden;
+}
+.items-grid-container{
+	overflow: auto;
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0;
+    padding-right: 1.8vw;
+    animation: appearance 0.5s;
+}
+.items{
+	display: grid;
+    grid-gap: 0.8vw;
+    grid-template-columns: repeat(auto-fill, minmax(22vh,1fr));   
+    align-content: start;
+    /*grid-template-rows: repeat(auto-fit, minmax(20vh, 1fr));*/
+    width: 100%;
+    height: 100%;
+}
+.items article{
+	position: relative;
+    overflow: hidden;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    display: flex;
+    height: 100%;
+    width: 100%; 
+    min-height: 26.5vh;
+    border: 1px solid rgba(60, 60, 60);
+    padding: 1px;
+    background: transparent;
+}
+.items article:hover{
+	border-color: var(--gold-one);	
+}
+.items article:hover .skin-card-image{
+	filter: brightness(1);
+}
+
+.items .skin-card-image {
+	-o-object-fit: cover;
+	   object-fit: cover;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    filter: brightness(0.8);
+    transition: all 0.2s;
+}
+
+
+.unlock-skin-icon {
+    position: absolute;
+    display: none;
+    font-size: 2rem;
+    align-self: center;
+    color: var(--gold-two);
+}
+
+
+
+
+
+input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+}
+
+.items-grid-container::-webkit-scrollbar {
+  width: 0.5vw; 
+  height: 1vh; 
+  display: inline-block;
+}
+
+.items-grid-container::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+.items-grid-container::-webkit-scrollbar-thumb {
+  background: var(--gold-five); 
+  border-radius: 5px;
+}
+
+.items-grid-container::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-two); 
+}
+
+@media (max-width: 767px){
+
+	.items-section{
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		padding-left: 0px;
+		padding-top: 0px;
+		height: 92%;
+
+        padding: 0px;
+        padding-bottom: 0px;
+        margin-top: 4vh;
+	}
+	.items-grid-container{
+		width: 100%;
+		padding-top: 0px;
+
+        padding-left: 1.8vw;
+	}
+	.items{
+		width: 100%;
+		display: grid;
+		grid-gap: 1vh;
+
+		/*font-family: 'Beaufort for LoL', serif; */
+
+        grid-template-columns: repeat(3, minmax(14vh,1fr));   
+        /*grid-template-rows: repeat(auto-fit, minmax(20vh, 1fr));*/
+        padding: 0px;
+        padding-top: 0px;
+	}
+    .items article {
+         min-height: 16vh;
+    }
+	.items article h3{
+		font-size: 10px;
+	}
+	.essences-price, .rp-price{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 45%;
+    }
+    .price{
+        width: 80%;
+    }
+
+
+    .pokemon-shop{
+        
+    }
+
+    .pokemon-shop .grid-pokemon-container{
+       
+    }
+
+    .pokemon-shop-grid{
+        
+    }
+
+    .store .filter-nav{
+        width: 95%;
+        height: auto;
+        padding: 10px;
+        padding-top: 0px ;
+        margin: 0;
+        align-self: center;
+
+    }
+    .store .search-filter{
+
+        padding-left: 1.5vw;
+        margin-top: 2vh;
+    }
+    .search-filter input{
+        font-size: 0.7rem;
+        margin-left: 5px;
+    }
+    .checkbox.collection{
+        height: 5.6vh;
+        align-items: flex-start;
+        padding-top: 1.5vh;
+        line-height: 1.1;
+        font-size: 0.7rem;
+    }
+}
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[12].use[3]!./src/components/confirmPurchaseWindow/confirmPurchaseWindow.css ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************/
+@keyframes softBackground {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+@keyframes appearance {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.confirm-purchase-screen{
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+	height: 100vh;
+	width: 100vw;
+	z-index: 10;
+	animation: softBackground 0.1s;
+}
+
+.confirm-purchase-window{
+	height: 70vh;
+	width: 41.4vw;
+	border: 2px solid white;
+	background-color: lightgray;
+	z-index: 1;
+	-o-border-image: linear-gradient(to bottom, var(--gold-six), var(--gold-six), var(--gold-five)) 1;
+	   border-image: linear-gradient(to bottom, var(--gold-six), var(--gold-six), var(--gold-five)) 1;
+	background-size: contain;
+	background-position-Y: 0px;
+	background-color: var(--blue-five);
+	animation: appearance 0.2s;
+}
+
+.confirm-purchase-window-content{
+	background: linear-gradient(to bottom, transparent 1%, var(--blue-five));
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	justify-content: space-between;
+}
+.image-container {
+	position: relative;
+	height: 43vh;
+	width: 100%;
+}
+.gradient {
+	position: absolute;
+	width: 100%;
+	height: 20%;
+	bottom: 0;
+	left: 0;
+	background: linear-gradient(to top, var(--blue-five), transparent);
+}
+.product-image {
+	-o-object-position: center;
+	   object-position: center;
+	-o-object-fit: cover;
+	   object-fit: cover;
+	height: 100%;
+	width: 100%;
+
+}
+.exit-button {
+	position: absolute;
+	background-color: var(--blue-four);
+	color: var(--color-secundary);
+	height: 26px;
+	width: 26px;
+	right: 10px;
+	top: 10px;
+	border-radius: 2px;
+	cursor: pointer;
+	text-align: center;
+	align-content: center;
+	z-index: 1;
+	font-size: 0.8rem;
+}
+.exit-button:hover {
+	background-color: var(--blue-five);
+	color: white; 	
+}
+.product-title{
+	display: flex;
+	flex-direction: column;
+	border-bottom: 1px solid var(--gold-six);
+	align-items: center;
+	width: 93%;
+	padding-bottom: 1.5vh;
+	position: absolute;
+	bottom: 23vh;
+}
+.product-name{
+	text-align: center;
+	font-size: 1.5rem;
+	letter-spacing: 2px;
+	font-family: 'Bold';
+	color: var(--color-secundary);
+	line-height: 1.2;
+}
+.product-title span {
+	font-size: 0.85rem;
+}
+.product-actions {
+	width: 100%;
+	height: 22.3vh;
+	display: flex;
+	flex-direction: column;
+	align-content: flex-end;
+	justify-content: center;
+	align-items: center;
+	/*background-color: var(--blue-five);*/
+}
+.license-info {
+	color: #a09b8c;
+	font-size: 0.9rem;
+	font-weight: 500;
+	text-align: center;
+	width: 85%;
+}
+.product-buy-buttons{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+.more-info {
+	color: #0592a5;
+}
+.more-info-icon {
+	display: inline-block;
+	transform: rotate(45deg);
+}
+.more-info:hover {
+	color: #cdfafa;
+}
+.button-container {
+	border: 1px solid white;
+	height: 6vh;
+	width: 10.1vw;
+	-o-border-image: linear-gradient(to bottom, var(--gold-six), var(--gold-five)) 1;
+	   border-image: linear-gradient(to bottom, var(--gold-six), var(--gold-five)) 1;
+	align-items: center;
+	align-content: center;
+	display: flex;
+	justify-content: center;
+	margin: 0px 10px;
+	margin-top: 1.5vh;
+	margin-bottom: 3.8vh;
+}
+.buy-rp-button, .buy-be-button{
+	position: relative;
+	height: 88%;
+	width: 96%;
+	border: 2px solid white;
+	font-size: 15px;
+	-o-border-image: linear-gradient(to bottom, var(--gold-two), var(--gold-two), var(--gold-five)) 1;
+	   border-image: linear-gradient(to bottom, var(--gold-two), var(--gold-two), var(--gold-five)) 1;
+	background: linear-gradient(to bottom, rgb(37, 34, 27), rgb(64, 56, 41));
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	font-family: Bold;
+	letter-spacing: 1px;
+	color: var(--color-primary);
+	animation: appearance 0.7s;
+}
+.buy-rp-button:hover, .buy-be-button:hover{
+	filter: brightness(1.2);
+	color: rgb(235, 225, 204);
+	background: linear-gradient(to bottom, rgb(45, 41, 32), rgb(60, 54, 41), rgb(77, 67, 49));
+	-o-border-image: linear-gradient(to bottom, rgb(240, 204, 132), rgb(240, 204, 132), rgb(145, 109, 49)) 1;
+	   border-image: linear-gradient(to bottom, rgb(240, 204, 132), rgb(240, 204, 132), rgb(145, 109, 49)) 1;
+}
+.buy-rp-button:active, .buy-be-button:active {
+	border: 2px solid rgb(105, 79, 42);
+	background: linear-gradient(to bottom, rgb(37, 34, 27), rgb(64, 56, 41));
+}
+.rp-icon, .be-icon{
+	margin-right: 5px;
+}
+.new-balance{
+	width: 100%;
+	position: absolute;
+	bottom: -30px;
+	font-size: 0.75rem;
+	text-align: center;
+	white-space: nowrap;
+}
+
+
+@media (max-width: 767px) {
+	.confirm-purchase-window{
+		height: 60%;
+		width: 80%;
+		border: 2px solid white;
+		background-color: lightgray;
+		z-index: 1;
+		-o-border-image: linear-gradient(to bottom, var(--gold-six), var(--gold-six), var(--gold-five)) 1;
+		   border-image: linear-gradient(to bottom, var(--gold-six), var(--gold-six), var(--gold-five)) 1;
+		background-position-Y: 35px;
+		background-size: 200px;
+	}
+	.image-container {
+		height: 36vh;
+	}
+	.gradient {
+		height: 100%;
+	}
+	.product-name{
+		font-size: 1.2rem;
+		letter-spacing: 2px;
+		line-height: 1.2;
+	}
+	.product-title span {
+		font-size: 0.7rem;
+	}
+	.product-actions {
+		height: 24vh;
+		display: flex;
+		background-color: var(--blue-five);
+	}
+	.license-info {
+		font-size: 0.6rem;
+		font-weight: 500;
+	}
+	.button-container {
+		border: 1px solid white;
+		height: 3.8vh;
+		width: 20vw;
+		-o-border-image: linear-gradient(to bottom, var(--gold-six), var(--gold-five)) 1;
+		   border-image: linear-gradient(to bottom, var(--gold-six), var(--gold-five)) 1;
+		align-items: center;
+		align-content: center;
+		display: flex;
+		justify-content: center;
+		margin: 0px 10px;
+		margin-top: 1.5vh;
+		margin-bottom: 3.8vh;
+	}
+	.buy-rp-button, .buy-be-button{
+		height: 25px;
+		width: 120px;
+		font-size: 10px;
+		border-width: 1px;
+	}
+	.rp-icon, .be-icon{
+		margin-right: 5px;
+		font-size: 13px;
+	}
+	.new-balance{
+		font-size: 9px;
+		bottom: -25px;
+		display: none;
+	}
+}
+/*!******************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[12].use[3]!./src/components/CustomSelect/CustomSelect.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************/
+/* CustomSelect Styles */
+.custom-select {
+  position: relative;
+  display: inline-block;
+  font-family: inherit;
+  margin-bottom: 1vh;
+  width: 100%;
+  height: 4.4vh;
+  background: var(--blue-four);
+  font-size: 0.8rem;
+  font-family: "Spiegel-Regular";
+}
+
+.custom-select-trigger {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.3s ease, border 0s;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding-right: 10px;
+  padding-left: 1vw;
+  height: 100%;
+  border: 1px solid;
+  -o-border-image: linear-gradient(to bottom, #C8AA6E, var(--gold-four), #785A28) 1;
+     border-image: linear-gradient(to bottom, #C8AA6E, var(--gold-four), #785A28) 1;
+
+
+}
+
+.custom-select-trigger:hover {
+  background: linear-gradient(var(--blue-five), var(--blue-four) /*#C8AA6E*/, var(--gold-seven));
+  -o-border-image: linear-gradient(to bottom, #F0E6D2, #C8AA6E, #C89B3C) 1;
+     border-image: linear-gradient(to bottom, #F0E6D2, #C8AA6E, #C89B3C) 1;
+}
+
+.custom-select.open .custom-select-trigger {
+  border: 1px solid var(--gold-six);
+}
+.custom-select.open .custom-select-trigger:hover {
+  background: var(--blue-four);
+}
+.custom-select-value {
+  flex: 1;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.8rem;
+}
+
+.custom-select-arrow {
+  margin-left: 12px;
+  font-size: 12px;
+  color: var(--gold-five);
+  transition: transform 0.3s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.custom-select-arrow.open {
+  transform: rotate(180deg);
+
+}
+
+.custom-select-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  border-top: none;
+  /*max-height: 200px;*/
+  overflow-y: auto;
+  animation: dropdownFadeIn 0.2s ease-out;
+  background: black;
+  border: 1px solid ;
+  -o-border-image: linear-gradient(to bottom, var(--gold-six), var(--gold-six), var(--gold-five)) 1;
+     border-image: linear-gradient(to bottom, var(--gold-six), var(--gold-six), var(--gold-five)) 1;
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.custom-select-option {
+  padding: 1vh 12px;
+  cursor: pointer;
+  color: var(--color-primary);
+  font-size: 0.8rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.custom-select-option:last-child {
+  border-bottom: none;
+}
+
+.custom-select-option:hover,
+.custom-select-option.highlighted {
+  background: var(--blue-six);
+}
+
+.custom-select-option.selected {
+  /*color: #fff;
+  font-weight: 600;
+  background: green;*/
+}
+
+.custom-select-option.selected:hover,
+.custom-select-option.selected.highlighted {
+  /*background: red;*/
+}
+
+/* Disabled state */
+.custom-select.disabled .custom-select-trigger {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border-color: #333;
+  color: #666;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.custom-select.disabled .custom-select-trigger:hover {
+
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.custom-select.disabled .custom-select-arrow {
+  color: #444;
+}
+
+/* Scrollbar styling for dropdown */
+.custom-select-dropdown::-webkit-scrollbar {
+  width: 6px;
+  display: none;
+}
+
+.custom-select-dropdown::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.custom-select-dropdown::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+.custom-select-dropdown::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .custom-select-trigger {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+  
+  .custom-select-option {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+}
+
+/* Custom themes - puedes agregar más variantes */
+.custom-select.theme-dark {
+  /* Ya es el tema por defecto */
+}
+
+.custom-select.theme-light .custom-select-trigger {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-color: #dee2e6;
+  color: #212529;
+}
+
+.custom-select.theme-light .custom-select-trigger:hover {
+  background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+  border-color: #adb5bd;
+}
+
+.custom-select.theme-light .custom-select-dropdown {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-color: #dee2e6;
+}
+
+.custom-select.theme-light .custom-select-option {
+  color: #212529;
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+
+.custom-select.theme-light .custom-select-option:hover,
+.custom-select.theme-light .custom-select-option.highlighted {
+  background: linear-gradient(135deg, #007acc 0%, #005a9e 100%);
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .custom-select-value {
+    font-size: 0.6rem;
+  }
+  .custom-select-option {
+  padding: 1vh 12px;
+  cursor: pointer;
+  color: var(--color-primary);
+  font-size: 0.6rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+}

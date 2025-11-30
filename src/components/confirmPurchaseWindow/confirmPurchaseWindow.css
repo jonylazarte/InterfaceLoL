@@ -1,0 +1,263 @@
+@keyframes softBackground {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+@keyframes appearance {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.confirm-purchase-screen{
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+	height: 100vh;
+	width: 100vw;
+	z-index: 10;
+	animation: softBackground 0.1s;
+}
+
+.confirm-purchase-window{
+	height: 70vh;
+	width: 41.4vw;
+	border: 2px solid white;
+	background-color: lightgray;
+	z-index: 1;
+	border-image: linear-gradient(to bottom, var(--gold-six), var(--gold-six), var(--gold-five)) 1;
+	background-size: contain;
+	background-position-Y: 0px;
+	background-color: var(--blue-five);
+	animation: appearance 0.2s;
+}
+
+.confirm-purchase-window-content{
+	background: linear-gradient(to bottom, transparent 1%, var(--blue-five));
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	justify-content: space-between;
+}
+.image-container {
+	position: relative;
+	height: 43vh;
+	width: 100%;
+}
+.gradient {
+	position: absolute;
+	width: 100%;
+	height: 20%;
+	bottom: 0;
+	left: 0;
+	background: linear-gradient(to top, var(--blue-five), transparent);
+}
+.product-image {
+	object-position: center;
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+
+}
+.exit-button {
+	position: absolute;
+	background-color: var(--blue-four);
+	color: var(--color-secundary);
+	height: 26px;
+	width: 26px;
+	right: 10px;
+	top: 10px;
+	border-radius: 2px;
+	cursor: pointer;
+	text-align: center;
+	align-content: center;
+	z-index: 1;
+	font-size: 0.8rem;
+}
+.exit-button:hover {
+	background-color: var(--blue-five);
+	color: white; 	
+}
+.product-title{
+	display: flex;
+	flex-direction: column;
+	border-bottom: 1px solid var(--gold-six);
+	align-items: center;
+	width: 93%;
+	padding-bottom: 1.5vh;
+	position: absolute;
+	bottom: 23vh;
+}
+.product-name{
+	text-align: center;
+	font-size: 1.5rem;
+	letter-spacing: 2px;
+	font-family: 'Bold';
+	color: var(--color-secundary);
+	line-height: 1.2;
+}
+.product-title span {
+	font-size: 0.85rem;
+}
+.product-actions {
+	width: 100%;
+	height: 22.3vh;
+	display: flex;
+	flex-direction: column;
+	align-content: flex-end;
+	justify-content: center;
+	align-items: center;
+	/*background-color: var(--blue-five);*/
+}
+.license-info {
+	color: #a09b8c;
+	font-size: 0.9rem;
+	font-weight: 500;
+	text-align: center;
+	width: 85%;
+}
+.product-buy-buttons{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+.more-info {
+	color: #0592a5;
+}
+.more-info-icon {
+	display: inline-block;
+	transform: rotate(45deg);
+}
+.more-info:hover {
+	color: #cdfafa;
+}
+.button-container {
+	border: 1px solid white;
+	height: 6vh;
+	width: 10.1vw;
+	border-image: linear-gradient(to bottom, var(--gold-six), var(--gold-five)) 1;
+	align-items: center;
+	align-content: center;
+	display: flex;
+	justify-content: center;
+	margin: 0px 10px;
+	margin-top: 1.5vh;
+	margin-bottom: 3.8vh;
+}
+.buy-rp-button, .buy-be-button{
+	position: relative;
+	height: 88%;
+	width: 96%;
+	border: 2px solid white;
+	font-size: 15px;
+	border-image: linear-gradient(to bottom, var(--gold-two), var(--gold-two), var(--gold-five)) 1;
+	background: linear-gradient(to bottom, rgb(37, 34, 27), rgb(64, 56, 41));
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	font-family: Bold;
+	letter-spacing: 1px;
+	color: var(--color-primary);
+	animation: appearance 0.7s;
+}
+.buy-rp-button:hover, .buy-be-button:hover{
+	filter: brightness(1.2);
+	color: rgb(235, 225, 204);
+	background: linear-gradient(to bottom, rgb(45, 41, 32), rgb(60, 54, 41), rgb(77, 67, 49));
+	border-image: linear-gradient(to bottom, rgb(240, 204, 132), rgb(240, 204, 132), rgb(145, 109, 49)) 1;
+}
+.buy-rp-button:active, .buy-be-button:active {
+	border: 2px solid rgb(105, 79, 42);
+	background: linear-gradient(to bottom, rgb(37, 34, 27), rgb(64, 56, 41));
+}
+.rp-icon, .be-icon{
+	margin-right: 5px;
+}
+.new-balance{
+	width: 100%;
+	position: absolute;
+	bottom: -30px;
+	font-size: 0.75rem;
+	text-align: center;
+	white-space: nowrap;
+}
+
+
+@media (max-width: 767px) {
+	.confirm-purchase-window{
+		height: 60%;
+		width: 80%;
+		border: 2px solid white;
+		background-color: lightgray;
+		z-index: 1;
+		border-image: linear-gradient(to bottom, var(--gold-six), var(--gold-six), var(--gold-five)) 1;
+		background-position-Y: 35px;
+		background-size: 200px;
+	}
+	.image-container {
+		height: 36vh;
+	}
+	.gradient {
+		height: 100%;
+	}
+	.product-name{
+		font-size: 1.2rem;
+		letter-spacing: 2px;
+		line-height: 1.2;
+	}
+	.product-title span {
+		font-size: 0.7rem;
+	}
+	.product-actions {
+		height: 24vh;
+		display: flex;
+		background-color: var(--blue-five);
+	}
+	.license-info {
+		font-size: 0.6rem;
+		font-weight: 500;
+	}
+	.button-container {
+		border: 1px solid white;
+		height: 3.8vh;
+		width: 20vw;
+		border-image: linear-gradient(to bottom, var(--gold-six), var(--gold-five)) 1;
+		align-items: center;
+		align-content: center;
+		display: flex;
+		justify-content: center;
+		margin: 0px 10px;
+		margin-top: 1.5vh;
+		margin-bottom: 3.8vh;
+	}
+	.buy-rp-button, .buy-be-button{
+		height: 25px;
+		width: 120px;
+		font-size: 10px;
+		border-width: 1px;
+	}
+	.rp-icon, .be-icon{
+		margin-right: 5px;
+		font-size: 13px;
+	}
+	.new-balance{
+		font-size: 9px;
+		bottom: -25px;
+		display: none;
+	}
+}

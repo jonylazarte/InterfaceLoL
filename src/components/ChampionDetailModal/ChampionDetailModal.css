@@ -1,0 +1,589 @@
+@keyframes slidein {
+  from {
+    opacity: 0.2;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes appearance {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.content {
+	width: 100%;
+	height: 88.3vh;
+	background-size: cover;
+	align-content: end;
+	transition: all 0.5s ease-in-out;
+	animation-name: slidein;
+	animation-duration: 0.5s;
+}
+
+.bottom-panel {
+	width: 100%;
+	background: linear-gradient(to top, var(--blue-five), transparent);
+}
+.skin-name {
+	text-align: center;
+	font-family: 'MediumItalic';
+	font-size: 1.3rem;
+	color: var(--color-secundary);
+	margin-bottom: 1.5vh;
+}
+.skin-navigator {
+	width: 100%;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	display: flex;
+	flex-direction: row;
+}
+.navigator-line {
+	height: 1px;
+	flex-grow: 1;
+	background-color: var(--gold-five);
+}
+.minibuttons-container {
+	gap: 10px;
+	display: flex;
+	flex-direction: row;
+	margin: 0px 10px;
+}
+.navigator-minibutton {
+	height: 8px;
+	width: 8px;
+	border-radius: 50%;
+	border: 2px solid var(--gold-five);
+	cursor: pointer;
+}
+.navigator-minibutton.active {
+	background-color: var(--gold-four);
+	border-color: var(--gold-four);
+	scale: 1.1;
+}
+.actions {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: center;
+	height: 14vh;
+	width: 100%;
+	position: relative;
+}
+.skin-changer {
+	width: 48vw;
+	height: 84%;
+	display: flex;
+}
+.skin-minicards-container {
+	width: 90%;
+	height: 100%;
+	overflow: hidden; /* Cambiar de scroll a hidden para el carrusel */
+	display: flex;
+	flex-direction: row;
+	justify-content: center; /* Centrar las cards */
+	justify-self: center;
+	align-items: center;
+	gap: 10px; /* Espacio entre las cards */
+	position: relative;
+}
+.skin-minicard {
+	width: 6.5vw;
+	height: 6.5vh;
+	border: 3px solid rgb(75, 75, 75);
+	cursor: pointer;
+	padding: 1px;
+	background-color: black;
+	position: relative;
+}
+.skin-minicard-image:hover {
+	filter: brightness(1);
+}
+.skin-minicard-image {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	filter: brightness(0.8);
+}
+.skin-minicard.selected {
+	border: 3px solid white;
+	height: 8.4vh;
+	width: 8.5vw;
+	margin: 0px 5px;
+	border-image: linear-gradient(to top, var(--gold-two), var(--gold-five)) 1;
+}
+.skin-cardmini.selected .skin-minicard-image {
+	filter: brightness(1);
+}
+.skin-minicard.selected:hover {
+	border-image: linear-gradient(to bottom, var(--gold-one), var(--gold-four)) 1;
+}
+.locked-icon{
+	position: absolute;
+	place-self: center;
+	bottom: -18%;
+	color: var(--gold-five);
+}
+.locked-icon.selected{
+	bottom: 20%;
+	font-size: 2rem;
+	color: var(--gold-four);
+}
+.unlock-button{
+	position: relative;
+    height: 4.4vh;
+    width: 11.6vw;
+    border: 2px solid white;
+    margin: 0px;
+    font-size: 0.9rem;
+    border-image: linear-gradient(to bottom, var(--gold-two), var(--gold-two), var(--gold-five)) 1;
+    /*background: linear-gradient(to bottom, rgb(40, 30, 30), rgb(40, 30, 30) , rgb(40, 30, 30) , rgb(40, 30, 30));*/
+    background: var(--blue-six);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--color-primary);
+    font-family: Bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: absolute;
+    left: 2.7vw;
+    top: 30px;
+}
+.unlock-button:hover {
+		border-image: linear-gradient(to bottom, var(--gold-one), var(--gold-four)) 1;
+  	color: var(--gold-one);
+  	background: linear-gradient(to bottom, var(--blue-six) 40%, rgb(69, 63, 44) 100%);
+
+}
+.unlock-button.disabled {
+		border: 2px solid gray;
+	  color: gray;
+	  cursor: default;
+}
+.unlock-button.disabled:hover {
+		border: 2px solid gray;
+	  background: var(--blue-six);
+	  color: gray;
+} 
+/* Estilos para las flechas del carrusel */
+.arrow-icon {
+	width: 40px;
+	height: 40px;
+	background: rgba(0, 0, 0, 0.9);
+	border: 2px solid var(--gold-four);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+	color: var(--gold-four);
+	font-size: 20px;
+	font-weight: bold;
+	user-select: none;
+	outline: none;
+}
+
+.arrow-icon:hover {
+	background: rgba(0, 0, 0, 0.9);
+	transform: scale(1.1);
+	border-color: var(--gold-four);
+	color: var(--gold-four);
+}
+
+.arrow-icon:active {
+	transform: scale(0.95);
+}
+
+.arrow-icon:focus {
+	outline: 2px solid var(--gold-three);
+	outline-offset: 2px;
+}
+
+/* Indicador visual de la skin seleccionada */
+/*.skin-card.selected::after {
+	content: '';
+	position: absolute;
+	top: -5px;
+	left: -5px;
+	right: -5px;
+	bottom: -5px;
+	border: 1px solid var(--gold-five);
+	pointer-events: none;
+	animation: pulse 2s infinite;
+}*/
+
+@keyframes pulse {
+	0% {
+		box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7);
+	}
+	70% {
+		box-shadow: 0 0 0 10px rgba(255, 215, 0, 0);
+	}
+	100% {
+		box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
+	}
+}
+
+/* Estilos para slots vacíos */
+.skin-card.empty {
+	border: 3px dashed rgba(255, 255, 255, 0.3);
+	background: rgba(0, 0, 0, 0.2);
+}
+
+.skin-card.empty:hover {
+	transform: none;
+	border-color: rgba(255, 255, 255, 0.3);
+}
+
+.empty-slot {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 24px;
+	font-weight: bold;
+}
+
+/* Mejorar las flechas cuando están deshabilitadas */
+.arrow-icon:disabled {
+	cursor: not-allowed;
+	opacity: 0.3;
+}
+
+.arrow-icon:disabled:hover {
+	transform: none;
+	background: rgba(0, 0, 0, 0.7);
+	border-color: var(--gold-five);
+	color: var(--gold-five);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.spells-section {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	animation: appearance 0.5s;
+}
+
+video {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; /* O "contain" según lo que necesites */
+        }
+.spells-panel {
+	position: absolute;
+	display: flex;
+	height: 100%;
+	width: 40vw;
+	top: 0;
+	left: 0;
+	align-items: flex-start;
+	align-content: flex-start;
+	background: linear-gradient(to right, var(--blue-five) 15%, transparent);
+	justify-content: flex-start;
+	flex-direction: column;
+	padding-left: 2.5vw;
+}
+.sprites-container {
+	display: flex;
+	flex-direction: row;
+	gap: 30px;
+	border-bottom: 1px solid var(--gold-five);
+	width: 70%;
+	justify-content: flex-start;
+	align-items: flex-end;
+	margin-top: 20vh;
+	padding-bottom: 20px;
+}
+.spell-item, .passive-item{
+	font-size: 0.8rem;
+	text-align: center;
+	font-family: 'Bold';
+	color: var(--color-secundary);
+}
+.spell-separator {
+	height: 44px;
+	width: 1px;
+	background: var(--gold-five);
+	margin-bottom: auto;
+}
+.spell-image {
+	width: 42px;
+	cursor: pointer;
+	border: 1px solid gray;
+	margin-bottom: 10px;
+}
+.spell-info {
+	margin-top: 20px;
+	width: 60%;
+}
+.name{
+	font-family: 'Bold';
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	font-size: 1.2rem;
+	color: var(--color-secundary);
+	margin-bottom: 10px;
+}
+.spell-description {
+	font-family: Regular;
+	font-size: 0.9rem;
+	line-height: 1.4;
+	color: darkgray;
+}
+.passive-image {
+	height: 36px;
+	width: 36px;
+	cursor: pointer;
+	border: 1px solid gray;
+	margin-bottom: 10px;
+}
+
+.spell-image.selected, .passive-image.selected {
+	border: 2px solid var(--gold-two);
+}
+
+
+
+.rounded-button{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-primary);
+    width: 30px;
+    height: 30px;
+    background-image: linear-gradient(to bottom, var(--gold-four), var(--gold-five));
+     clip-path: circle(50%);
+    margin-left: 1.7vw;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+
+}
+.rounded-button:hover {
+    color: var(--color-secundary);
+    background-image: linear-gradient(to bottom, var(--gold-one), var(--gold-four));
+}
+.rounded-button::before {
+    position: absolute;
+    left: 6.5%;
+    content: '';
+    height: 87%;
+    width: 87%;
+    background: var(--blue-six);
+    clip-path: circle(50%);
+    z-index: 0;
+    align-self: center;
+    justify-self: center;
+    place-self: center;
+}
+.rounded-icon {
+    position: absolute;
+}
+
+
+
+
+
+
+
+@media (max-width: 767px){
+	.spells-section{
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-end;
+
+	}
+	video {
+    width: 100%;
+    height: 75%;
+    object-position: -80vw;
+    object-fit: cover; /* O "contain" según lo que necesites */
+    filter: brightness(1.2);
+  }
+	.spells-panel {
+		position: absolute;
+		display: flex;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		align-items: flex-start;
+		align-content: flex-start;
+		background: linear-gradient(to bottom, var(--blue-five) 15%, transparent);
+		justify-content: flex-start;
+		flex-direction: column;
+		padding-left: 2.5vw;
+	}
+	.sprites-container {
+		display: flex;
+		flex-direction: row;
+		gap: 30px;
+		border-bottom: 1px solid var(--gold-five);
+		width: 95%;
+		justify-content: flex-start;
+		align-items: flex-end;
+		margin-top: 12vh;
+		padding-bottom: 20px;
+		align-self: center;
+	}
+	.spell-item, .passive-item{
+		font-size: 0.7rem;
+		text-align: center;
+		font-family: 'Bold';
+		color: var(--color-secundary);
+	}
+	.spell-separator {
+		height: 44px;
+		width: 1px;
+		background: var(--gold-five);
+		margin-bottom: auto;
+	}
+	.spell-image {
+		width: 25px;
+		cursor: pointer;
+		border: 1px solid gray;
+		margin-bottom: 10px;
+	}
+	.spell-info {
+		margin-top: 20px;
+		margin-left: 2vw;
+		width: 60%;
+	}
+	.name{
+		font-family: 'Bold';
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		font-size: 0.8rem;
+		line-height: 1.1;
+		color: var(--color-secundary);
+		margin-bottom: 5px;
+	}
+	.spell-description {
+		font-family: Regular;
+		font-size: 0.7rem;
+		line-height: 1.4;
+		color: darkgray;
+	}
+	.passive-image {
+		height: 30px;
+		width: 30px;
+		cursor: pointer;
+		border: 1px solid gray;
+		margin-bottom: 10px;
+	}
+
+	.spell-image.selected, .passive-image.selected {
+		border: 2px solid var(--gold-two);
+	}
+}
+
+
+@media (max-width: 767px) {
+	.content {
+		background-size: 110%;
+		background-position: center;
+	}
+	.skin-name {
+		text-align: center;
+		font-family: 'MediumItalic';
+		font-size: 1rem;
+		color: var(--color-secundary);
+		margin-bottom: 1.5vh;
+	}
+	.actions {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		justify-content: center;
+		height: 14vh;
+		width: 100%;
+		position: relative;
+	}
+	.skin-changer {
+		width: 100%;
+		height: 84%;
+		display: flex;
+		justify-content: center;
+		margin-top: 1vh;
+	}
+	.skin-minicards-container {
+		width: 90%;
+		height: 100%;
+		overflow: hidden; /* Cambiar de scroll a hidden para el carrusel */
+		display: flex;
+		flex-direction: row;
+		justify-content: center; /* Centrar las cards */
+		justify-self: center;
+		align-items: center;
+		gap: 10px; /* Espacio entre las cards */
+		position: relative;
+	}
+	.skin-minicard {
+		width: 15vw;
+		height: 6.5vh;
+		border: 3px solid rgb(75, 75, 75);
+		cursor: pointer;
+		padding: 1px;
+		background-color: black;
+		position: relative;
+	}
+	.skin-minicard.selected {
+		border: 2px solid white;
+		height: 7.5vh;
+		width: 22vw;
+		margin: 0px 5px;
+		border-image: linear-gradient(to top, var(--gold-two), var(--gold-five)) 1;
+	}
+	.unlock-button{
+			position: absolute;
+	    height: 4vh;
+	    width: 25vw;
+	    border: 2px solid white;
+	    margin: 0px;
+	    font-size: 0.45rem;
+	    border-image: linear-gradient(to bottom, var(--gold-two), var(--gold-two), var(--gold-five)) 1;
+	    /*background: linear-gradient(to bottom, rgb(40, 30, 30), rgb(40, 30, 30) , rgb(40, 30, 30) , rgb(40, 30, 30));*/
+	    background: var(--blue-six);
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    cursor: pointer;
+	    color: var(--color-primary);
+	    font-family: Bold;
+	    letter-spacing: 1px;
+	    text-transform: uppercase;
+	    position: absolute;
+	    left: 37.5vw;
+	    top: -30vh;
+	}
+}

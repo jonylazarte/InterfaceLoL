@@ -1,0 +1,215 @@
+/*!***********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[12].use[3]!./src/pages/Store/store.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************/
+@keyframes appearance {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.store{
+	height: calc(100vh - var(--dashboard-header-height));
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+    align-content: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    animation: appearance 0.6s;
+}
+.gradient-layer{
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent 15%);
+    position: absolute;
+    z-index: 0;
+    display: none;
+}
+.store-header{ 
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 0.9vh 2.5vw 0 1.8vw;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 0.7vh;
+    position: relative;
+}
+
+.store-tab{
+    position: relative;
+    transition: all 1s;
+    height: 24px;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    align-content: center;
+    text-align: center;
+    cursor: pointer;
+    font-size: 0.84rem;
+    letter-spacing: 1px;
+    color: var(--color-primary);
+    transition: all 0.1s;
+    -o-border-image: linear-gradient(to right, transparent, var(--color-primary), transparent) 1;
+       border-image: linear-gradient(to right, transparent, var(--color-primary), transparent) 1;
+    font-family: 'Medium';
+}
+.store-tab:hover{
+    color: var(--gold-one);
+}
+.active-store-tab {
+  color: #F0E6D2 
+}
+
+.active-store-tab::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #CDBE91, transparent);
+  width: 90%;
+  justify-self: center;
+}
+.sections-items{
+    display: flex;
+    flex-direction: row;
+}
+.right-items{
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-end;
+    top: 1.1vh;
+    right: 2.4vw;
+}
+.rounded-button{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-primary);
+    width: 30px;
+    height: 30px;
+    background-image: linear-gradient(to bottom, var(--gold-four), var(--gold-five));
+     clip-path: circle(50%);
+    margin-left: 1.7vw;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+
+}
+.rounded-button:hover {
+    color: var(--color-secundary);
+    background-image: linear-gradient(to bottom, var(--gold-one), var(--gold-four));
+}
+.rounded-button::before {
+    position: absolute;
+    left: 6.5%;
+    content: '';
+    height: 87%;
+    width: 87%;
+    background: var(--blue-six);
+    clip-path: circle(50%);
+    z-index: 0;
+    align-self: center;
+    justify-self: center;
+    place-self: center;
+}
+.rounded-icon {
+    position: absolute;
+}
+.store-header .buy-rp-button{
+    position: relative;
+    height: 4.4vh;
+    width: 10.6vw;
+    border: 2px solid white;
+    margin: 0px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    -o-border-image: linear-gradient(to bottom, var(--gold-two), var(--gold-four), var(--gold-five)) 1;
+       border-image: linear-gradient(to bottom, var(--gold-two), var(--gold-four), var(--gold-five)) 1;
+    /*background: linear-gradient(to bottom, rgb(40, 30, 30), rgb(40, 30, 30) , rgb(40, 30, 30) , rgb(40, 30, 30));*/
+    background: var(--blue-six);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--color-primary);
+    font-family: 'Bold';
+    transition: color 0.5s;
+    transition-delay: 0.2s;
+}
+.store-header .buy-rp-button:hover{
+    color: var(--gold-one);
+    -o-border-image: linear-gradient(to bottom, var(--gold-one), var(--gold-four))1;
+       border-image: linear-gradient(to bottom, var(--gold-one), var(--gold-four))1;
+    background: linear-gradient(to bottom, var(--blue-six) 40%, rgb(69, 63, 44) 100%);
+}
+@media (max-width: 767px){
+    .store-header{
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    padding-left: 15px;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    /* border: 1px solid rgba(70, 0, 0, 1.0); */
+    }
+    .store-header .buy-rp-button{
+    position: relative;
+    height: 4vh;
+    width: 21vw;
+    border: 2px solid white;
+    margin: 0px;
+    font-size: 0.5rem;
+    text-align: center;
+    letter-spacing: 1px;
+    -o-border-image: linear-gradient(to bottom, var(--gold-two), var(--gold-four), var(--gold-five)) 1;
+       border-image: linear-gradient(to bottom, var(--gold-two), var(--gold-four), var(--gold-five)) 1;
+    /*background: linear-gradient(to bottom, rgb(40, 30, 30), rgb(40, 30, 30) , rgb(40, 30, 30) , rgb(40, 30, 30));*/
+    background: var(--blue-six);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--color-primary);
+    font-family: 'Bold';
+    transition: color 0.5s;
+    transition-delay: 0.2s;
+    }
+    .rounded-button{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-primary);
+    width: 25px;
+    height: 25px;
+    background-image: linear-gradient(to bottom, var(--gold-four), var(--gold-five));
+     clip-path: circle(50%);
+    margin-left: 1.7vw;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+        font-size: 0.8rem;
+
+    }
+    .store-tab{
+        font-size: 0.6rem;
+    }
+    .active-store-tab::after {
+      bottom: 0px;
+      width: 90%;
+    }
+}

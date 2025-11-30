@@ -1,0 +1,19 @@
+.tooltip-wrapper {
+	height: 100%;
+}
+.mini-tooltip {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--blue-six);
+	padding-right: 10px;
+	padding-left: 10px;
+	height: 4.2vh;
+	border: 2px solid;
+	border-image: linear-gradient(to bottom, var(--gold-five), var(--gold-six)) 1;
+	color: darkgray;
+	font-size: 0.8rem;
+	font-family: Spiegel-Regular;
+	white-space: nowrap;
+	z-index: 7;
+}

@@ -1,0 +1,261 @@
+@keyframes appearance {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+input{
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 0px;
+    color: lightgray;
+    height: 100%;
+}
+input:focus{
+    outline: none;
+}
+input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+}
+.pokemon-shop{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: space-between;
+    flex-grow: 1;
+    padding-left: 2.75vw;
+    padding-right: 0.2vw;
+    margin-top: 5.6vh;
+    overflow: hidden;
+}
+
+.pokemon-shop .grid-pokemon-container{
+    overflow: auto;
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0;
+    padding-right: 1.8vw;
+    animation: appearance 0.5s;
+    padding-top: 0;
+    position: relative;
+}
+
+.pokemon-shop-grid{
+    display: grid;
+    grid-gap: 0.8vw;
+    grid-template-columns: repeat(auto-fill, minmax(22vh,1fr));   
+    align-content: start;
+    /*grid-template-rows: repeat(auto-fit, minmax(20vh, 1fr));*/
+    width: 100%;
+    height: 100%;
+}
+.pokemon-shop-grid button{
+    opacity: 0;
+    height: 0px;
+    width: 0px;
+    margin-top: auto;
+}
+
+.store .filter-nav{
+    display: flex;
+    flex-direction: column;
+    width: 14vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    padding-top: 0px;
+    margin-right: 1.55vw;
+    white-space: nowrap;
+    margin-top: -7px;
+}
+
+.store .select-filter {
+    margin-top: 2.9vh;
+}
+.store .search-filter, .store .checkbox{
+    font-size: 0.8rem;
+    border: 1px solid #c8aa6e;
+    margin-top: 0px;
+    color: #A09B8C;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-image: linear-gradient(to bottom, #C8AA6E, #C8AA6E, #785A28) 1;
+    font-family: "Spiegel-Regular";
+}
+
+.store .search-filter{
+    background: black;
+    border-image: linear-gradient(#785A28, var(--gold-five)) 1!important;
+    width: 100%;
+    height: 4.3vh;
+    margin-bottom: 0px;
+    color: var(--color-secundary);
+    padding-left: 0.6vw;
+    margin-top: 2.8vh;
+
+}
+.search-filter input{
+    width: 100%;
+}
+
+
+.nav-section{
+    border-bottom: 1px solid rgba(75, 75, 75, 0.5);
+    /*padding-top: 15px;
+    padding-bottom: 15px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+.first{
+    padding-top: 0;
+    padding-bottom: 1.1vh;
+}
+.last{
+    border-bottom: 0;
+    padding-top: 0;
+}
+
+.store .checkbox{
+    background: 0;
+    border: 0;
+    margin: 0px;
+    padding: 0;
+    font-size: 0.8rem;
+    height: 4.3vh;
+    padding-left: 1px;
+    line-height: 1;
+}
+.store .checkbox:hover{
+    color: var(--gold-one);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+
+.checkbox.collection{
+    height: 5.6vh;
+    align-items: flex-start;
+    padding-top: 1.5vh;
+    line-height: 1.1;
+}
+.checkbox.section{
+    font-family: 'Medium';
+    letter-spacing: 1px;
+    height: 4.25vh;
+    padding-left: 0;
+}
+
+.custom-checkbox{
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 2px solid var(--gold-six);
+    margin-right: 0.5vw;
+    width: 0.95vw;
+    height: 0.95vw;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.custom-checkbox-romb{
+    transform: rotate(45deg);
+    border: 2px solid var(--gold-six);
+    border-image: linear-gradient(to right, var(--gold-five), var(--gold-five)) 1;
+    height: 11px;
+    width: 11px;
+    margin-right: 1vw;
+    margin-left: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.section-selected{
+    color: var(--gold-one);
+}
+.check-element{
+    height: 6px;
+    width: 6px;
+    background-color: var(--gold-five);
+}
+.check-icon{
+    color: var(--gold-two);
+    font-size: 14px;
+}
+
+.confirm-purchase-window{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-Y: -90px;
+    background-position-X: center;
+}
+
+
+
+@media (max-width: 767px){
+    .pokemon-shop{
+        justify-content: flex-start;
+        padding: 0px;
+        padding-bottom: 0px;
+        margin-top: 4vh;
+        flex-direction: column;
+    }
+
+    .pokemon-shop .grid-pokemon-container{
+       width: 100%;
+       padding-top: 0px;
+       padding-left: 1.8vw;
+    }
+
+    .pokemon-shop-grid{
+        grid-gap: 1vh;
+        grid-template-columns: repeat(3, minmax(14vh,1fr));   
+        /*grid-template-rows: repeat(auto-fit, minmax(20vh, 1fr));*/
+        width: 100%;
+        padding: 0px;
+        padding-top: 0px;
+    }
+
+    .store .filter-nav{
+        width: 95%;
+        height: auto;
+        padding: 10px;
+        padding-top: 0px ;
+        margin: 0;
+        align-self: center;
+
+    }
+    .store .search-filter{
+
+        padding-left: 1.5vw;
+        margin-top: 2vh;
+    }
+    .search-filter input{
+        font-size: 0.7rem;
+    }
+    .checkbox.collection{
+        height: 5.6vh;
+        align-items: flex-start;
+        padding-top: 1.5vh;
+        line-height: 1.1;
+        font-size: 0.7rem;
+    }
+    .custom-checkbox{
+        width: 13px;
+        height: 13px;
+        margin-right: 5px;
+    }
+
+}
+
+@media (min-width:767px) and (max-width: 1400px){
+
+    
+}
+   
