@@ -5,7 +5,6 @@
   /*font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;*/
   line-height: 1.5;
   font-weight: 400;
-  color: geren;
   background-color: rgb(1, 10, 19);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -141,7 +140,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 @font-face {
   font-family: Bolditalic;
-  src: url('/fonts/BeaufortforLOL-Bolditalic.ttf') /*format('ttf')*/;
+  src: url('/fonts/BeaufortforLOL-Bolditalic.ttf');
   font-weight: normal;
   font-style: normal;
   /*font-size: 40pt;
@@ -151,7 +150,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 @font-face {
   font-family: Heavy;
-  src: url('/fonts/BeaufortforLOL-Heavy.ttf') /*format('ttf')*/;
+  src: url('/fonts/BeaufortforLOL-Heavy.ttf') ;
   font-weight: normal;
   font-style: normal;
   /*font-size: 40pt;
@@ -161,7 +160,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 @font-face {
   font-family: Heavyitalic;
-  src: url('/fonts/BeaufortforLOL-Heavyitalic.ttf') /*format('woff')*/;
+  src: url('/fonts/BeaufortforLOL-Heavyitalic.ttf') ;
   font-weight: normal;
   font-style: normal;
   /*font-size: 40pt;
@@ -171,7 +170,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 @font-face {
   font-family: Italic;
-  src: url('/fonts/BeaufortforLOL-italic.ttf') /*format('woff')*/;
+  src: url('/fonts/BeaufortforLOL-italic.ttf') ;
   font-weight: normal;
   font-style: normal;
   /*font-size: 40pt;
@@ -181,7 +180,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 @font-face {
   font-family: Light;
-  src: url('/fonts/BeaufortforLOL-Light.ttf') /*format('woff')*/;
+  src: url('/fonts/BeaufortforLOL-Light.ttf') ;
   font-weight: normal;
   font-style: normal;
   /*font-size: 40pt;
@@ -191,7 +190,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 @font-face {
   font-family: Lightitalic;
-  src: url('/fonts/BeaufortforLOL-Lightitalic.ttf') /*format('woff')*/;
+  src: url('/fonts/BeaufortforLOL-Lightitalic.ttf') ;
   font-weight: normal;
   font-style: normal;
   /*font-size: 40pt;
@@ -201,7 +200,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 @font-face {
   font-family: Medium;
-  src: url('/fonts/BeaufortforLOL-Medium.ttf') /*format('woff')*/;
+  src: url('/fonts/BeaufortforLOL-Medium.ttf') ;
   font-weight: normal;
   font-style: normal;
   /*font-size: 40pt;
@@ -211,7 +210,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 @font-face {
   font-family: Mediumitalic;
-  src: url('/fonts/BeaufortforLOL-Mediumitalic.ttf') /*format('woff')*/;
+  src: url('/fonts/BeaufortforLOL-Mediumitalic.ttf');
   font-weight: normal;
   font-style: normal;
   /*font-size: 40pt;
@@ -221,7 +220,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 @font-face {
   font-family: Regular;
-  src: url('/fonts/BeaufortforLOL-Regular.ttf') /*format('woff')*/;
+  src: url('/fonts/BeaufortforLOL-Regular.ttf') ;
   font-weight: normal;
   font-style: normal;
   /*font-size: 40pt;
