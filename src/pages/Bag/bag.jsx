@@ -1,5 +1,5 @@
-import Pokedex from '../Pokedex/index.jsx'
-import Pokemon from '../Pokemon/pokemon.jsx'
+import Pokedex from '@/pages/Pokedex/index.jsx'
+import Pokemon from '@/pages/Pokemon/pokemon.jsx'
 import './bag.css'
 import {useState, memo} from 'react'
 
