@@ -8,7 +8,6 @@ import { GiDoubled, GiDividedSquare } from "react-icons/gi";
 import { FaCheck } from "react-icons/fa6";
 import ConfirmPurchaseWindow from '@/components/confirmPurchaseWindow/confirmPurchaseWindow.jsx'
 import { updateCoins } from '@/redux/slices/userSlice.js';
-import { selectUserItemsData, buyItem } from '@/redux/slices/userItemsSlice.js';
 
 export default memo(function ItemsShop(){
 	const API_URL = process.env.NEXT_PUBLIC_API_URL
@@ -23,7 +22,6 @@ export default memo(function ItemsShop(){
     const [inCollection, setInCollection] = useState(false)
     const [sortedBy, setSortedBy] = useState()
     const {PurchaseWindow, activeWindow} = ConfirmPurchaseWindow("item")
-    const {loading, userItems, error} = useSelector(selectUserItemsData);
 
 	useEffect(()=>{
 		fetch(`https://pokeapi.co/api/v2/item?offset=0&limit=304`).then(response=>response.json()).then(data=>{ setItems(data.results); setRenderData(data.results) })
