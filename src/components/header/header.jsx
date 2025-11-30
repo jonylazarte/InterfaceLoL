@@ -7,7 +7,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { RiSidebarFoldFill } from "react-icons/ri";
 import { GiStoneCrafting } from "react-icons/gi";
 import { selectUserInterfaceData, setActualSection} from '@/redux/slices/userInterfaceSlice.js'
-import MiniTooltip from '@/components/Tooltip/miniTooltip/miniToolTip.jsx'
+import MiniTooltip from '@/components/ToolTip/miniTooltip/miniTooltip.jsx'
 
 
 	export const ToolTip = () => {
