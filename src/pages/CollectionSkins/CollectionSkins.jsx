@@ -5,7 +5,7 @@ import { selectUserPokemonData } from '@/redux/slices/userPokemonSlice.js'
 import { selectUserSkinsData } from '@/redux/slices/userSkinsSlice.js'
 import { BsSearch } from "react-icons/bs"
 import { FaCheck } from "react-icons/fa6";
-import SkinTooltip from '@/components/Tooltip/skinTooltip/skinTooltip.jsx'
+import SkinTooltip from '@/components/ToolTip/skinTooltip/skinTooltip.jsx'
 import { GiPadlock } from "react-icons/gi";
 import CustomSelect from '@/components/CustomSelect/CustomSelect.jsx';
 
