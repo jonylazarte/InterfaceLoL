@@ -6,9 +6,9 @@ import {useSelector, useDispatch} from 'react-redux'
 import { BsSearch } from "react-icons/bs"
 import { GiDoubled, GiDividedSquare } from "react-icons/gi";
 import { FaCheck } from "react-icons/fa6";
-import ConfirmPurchaseWindow from '../../../src/components/confirmPurchaseWindow/confirmPurchaseWindow.jsx'
-import { updateCoins } from '../../../src/redux/slices/userSlice.js';
-import { selectUserItemsData, buyItem } from '../../../src/redux/slices/userItemsSlice.js';
+import ConfirmPurchaseWindow from '@/components/confirmPurchaseWindow/confirmPurchaseWindow.jsx'
+import { updateCoins } from '@/redux/slices/userSlice.js';
+import { selectUserItemsData, buyItem } from '@/redux/slices/userItemsSlice.js';
 
 export default memo(function ItemsShop(){
 	const API_URL = process.env.NEXT_PUBLIC_API_URL
