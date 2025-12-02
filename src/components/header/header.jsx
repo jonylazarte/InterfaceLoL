@@ -6,7 +6,7 @@ import { GiDoubled, GiDividedSquare, GiStoneCrafting } from 'react-icons/gi';
 import { useSelector, useDispatch } from 'react-redux';
 import { RiSidebarFoldFill } from 'react-icons/ri';
 import { selectUserInterfaceData, setActualSection } from '../../redux/slices/userInterfaceSlice.js';
-import MiniTooltip from '@/components/ToolTip/miniToolTip/miniToolTip.jsx';
+import MiniTooltip from '@/components/ToolTip/miniTooltip/miniTooltip.jsx';
 
 // Hook personalizado para el tooltip (ESLint feliz)
 export const useTooltip = () => {
