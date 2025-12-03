@@ -3,14 +3,13 @@ import { IoClose } from "react-icons/io5";
 import { IoArrowForward } from "react-icons/io5";
 import styles from './ChampionDetailModal.module.css';
 import './ChampionDetailModal.css';
-import {useSelector, useDispatch} from 'react-redux'
+import { useSelector } from 'react-redux'
 import { selectUserPokemonData } from '@/redux/slices/userPokemonSlice.js';
 import { selectUserSkinsData } from '@/redux/slices/userSkinsSlice.js';
 import { GiStripedSword } from "react-icons/gi";
 import { GrVulnerability } from "react-icons/gr";
 import { LuSwords } from "react-icons/lu";
 import { GiShield } from "react-icons/gi";
-import { TiSpiral } from "react-icons/ti";
 import { PiSpiralBold } from "react-icons/pi";
 import { GiMetalBoot } from "react-icons/gi";
 import { IoMdTrophy } from "react-icons/io";
@@ -54,7 +53,7 @@ const ChampionDetailModal = ({ champion, isOpen, onClose }) => {
     
     const maxStatValue = 10;
     const championImg = `url('/${activeTab === 'resumen' ? 'centered' : 'splash'}/${champion.id}_0.jpg')`
-    const skinFileName = `${champion.id}_`
+    /*const skinFileName = `${champion.id}_`*/
     
     const Resumen = () => {
         const difficulty = champion?.info.difficulty;
@@ -228,6 +227,7 @@ const ChampionDetailModal = ({ champion, isOpen, onClose }) => {
         
         const visibleSkins = getVisibleSkins();
         const totalSkins = champion.skins.length
+        console.log(totalSkins)
         
         return <>
             <div className="content" style={{backgroundImage: `url(/${ window.innerWidth < 767 ? 'loading' : 'splash'}/${champion.id}_${champion.skins[selectedSkin].num}.jpg)`}}>
@@ -237,7 +237,7 @@ const ChampionDetailModal = ({ champion, isOpen, onClose }) => {
                         <div className="navigator-line"></div>
                         <div className="minibuttons-container">
                             {champion.skins.map((_, index) =>
-                            (<div onClick={() => setSelectedSkin(index)} className={`navigator-minibutton ${index == selectedSkin ? 'active' : null}`}></div>))}
+                            (<div key={index} onClick={() => setSelectedSkin(index)} className={`navigator-minibutton ${index == selectedSkin ? 'active' : null}`}></div>))}
                         </div>
                         <div className="navigator-line"></div>
                     </div>
@@ -332,8 +332,8 @@ const ChampionDetailModal = ({ champion, isOpen, onClose }) => {
                     </div>
                     <div className="spell-separator"></div>
                     {champion.spells.map((spell, index) => {
-                        return <div className="spell-item">
-                            <img onClick={() => setSelectedSpell(index+1)} className={`spell-image ${selectedSpell === index+1 ? 'selected' : null}`} src={`/spell/${spell.image.full}`}></img>
+                        return <div key={index} className="spell-item">
+                            <img key={index} onClick={() => setSelectedSpell(index+1)} className={`spell-image ${selectedSpell === index+1 ? 'selected' : null}`} src={`/spell/${spell.image.full}`}></img>
                             {spellKeys[index]}
                         </div>
                     })}
