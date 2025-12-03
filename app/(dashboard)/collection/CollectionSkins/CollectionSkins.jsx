@@ -1,7 +1,6 @@
 import './CollectionSkins.css'
 import { useState, useEffect, memo, useMemo } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { selectUserPokemonData } from '@/redux/slices/userPokemonSlice.js'
+import { useSelector } from 'react-redux'
 import { selectUserSkinsData } from '@/redux/slices/userSkinsSlice.js'
 import { BsSearch } from "react-icons/bs"
 import { FaCheck } from "react-icons/fa6";
@@ -9,22 +8,18 @@ import SkinTooltip from '@/components/ToolTip/skinTooltip/skinTooltip.jsx'
 import { GiPadlock } from "react-icons/gi";
 import CustomSelect from '@/components/CustomSelect/CustomSelect.jsx';
 
-export default memo(function Pokemon({}) {
+export default memo(function Pokemon() {
     const API_URL = process.env.NEXT_PUBLIC_API_URL;
-    const token = localStorage.getItem('token')
-    const dispatch = useDispatch()
     //const [pokemon, setPokemon] = useState();
-    const { loading, userChampions, error } = useSelector(selectUserPokemonData);
     const { userSkins } = useSelector(selectUserSkinsData);
     const [skins, setSkins] = useState([])
-    const [renderSkins, setRenderSkins] = useState([])
     const raritys = ["Signature", "Hall", "Ultimate", "Mythic", "Legendary", "Epic"];
     const [searchKeys, setSearchKeys] = useState()
     const [groupedBy, setGroupedBy] = useState("collection")
     const [sortedBy, setSortedBy] = useState()
     const [showNotObtained, setShowNotObtained] = useState(false)
     const [userSkinsFull, setUserSkinsFull] = useState([])
-
+    console.log(searchKeys)
     const sortOptionsByMode = {
         collection: [ // collection
             { value: "purchaseDate", label: "Fecha de compra" },
@@ -73,7 +68,7 @@ export default memo(function Pokemon({}) {
         setSortedBy(defaultOption);
     }, [groupedBy]);
 
-    function applySearchFilter(groupedSections, searchKeys) {
+    /*function applySearchFilter(groupedSections, searchKeys) {
         if (!searchKeys) return groupedSections;
         const lower = searchKeys.toLowerCase();
         return groupedSections
@@ -86,7 +81,7 @@ export default memo(function Pokemon({}) {
                 return [section, filteredSkins];
             })
             .filter(([, skins]) => skins.length > 0); // eliminar secciones vacías
-    }
+    }*/
 
     function groupByAcquisitionYear(skins) {
         return Object.entries(
@@ -189,6 +184,7 @@ export default memo(function Pokemon({}) {
         }
 
         // si hay que mostrar también los no obtenidos
+        // eslint-disable-next-line no-undef
         const obtainedIds = new Set(userSkins?.map((s) => s.id));
         const notObtained = allSkins.filter((s) => !obtainedIds.has(s.id));
 
@@ -216,6 +212,7 @@ export default memo(function Pokemon({}) {
 
         // combinamos: primero obtenidos, luego no obtenidos
         const combined = [];
+        // eslint-disable-next-line no-undef
         const mapNotObtained = new Map(groupedNotObtained);
         for (const [section, skins] of groupedUser) {
             const extras = mapNotObtained.get(section) || [];
@@ -248,7 +245,8 @@ export default memo(function Pokemon({}) {
                     return masteryB - masteryA;
                 });
                 break;
-            case "mostOwned":
+            case "mostOwned": {
+                // eslint-disable-next-line no-undef
                 const obtainedIds = new Set(userSkins?.map((s) => s.id));
                 sortedGrouped.sort(([, skinsA], [, skinsB]) => {
                     const ownedA = skinsA.filter((s) => obtainedIds.has(s.id)).length;
@@ -256,8 +254,9 @@ export default memo(function Pokemon({}) {
                     return ownedB - ownedA;
                 });
                 break;
-            case "rarity":
-                break;
+            }
+            /*case "rarity":
+                break;*/
             default:
                 break;
         }
@@ -294,9 +293,10 @@ export default memo(function Pokemon({}) {
                 <div className="skins-grid">
                     {skins.length > 0
                         ? skins.map((skin) => (
-                            <SkinTooltip delay={100} content={{ skinName: skin.name, purchaseDate: skin.purchaseDate, chromas: skin.chromas, skinRarity: skin.rarity, inCollection: isSkinInCollection(skin.id), value: skin.value }} position="top">
+                            <SkinTooltip key={skin.id} delay={100} content={{ skinName: skin.name, purchaseDate: skin.purchaseDate, chromas: skin.chromas, skinRarity: skin.rarity, inCollection: isSkinInCollection(skin.id), value: skin.value }} position="top">
                                 <div key={skin.id} className={`skin-card ${isSkinInCollection(skin.id) ? null : 'not-obtained'}`}>
                                     <img
+                                        key={skin.id}
                                         className={`skin-card-image ${isSkinInCollection(skin.id) ? null : 'not-obtained'}`}
                                         src={`/loading/${skin.img}`}
                                         alt={skin.name}
@@ -357,8 +357,8 @@ export default memo(function Pokemon({}) {
 
                     <div className="rarity-icons-container">
                         <div className="rarity-icons">
-                            {raritys.map(rarity =>
-                                <div className="rarity-item">
+                            {raritys.map((rarity, index) =>
+                                <div key={index} className="rarity-item">
                                     <img className="rarity-image" src={`/raritys/${rarity}.png`}></img>
                                     {countRarity[rarity] || '0'}
                                 </div>
