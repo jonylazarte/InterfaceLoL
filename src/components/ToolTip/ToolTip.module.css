@@ -1,0 +1,191 @@
+.tooltip {
+  background-color: rgb(26, 28, 33);
+  color: white;
+  width: 21vw;
+  height: auto;
+  padding: 20px;
+  padding-bottom: 4vh;
+  z-index: 1000;
+  pointer-events: none;
+  font-family: 'Spiegel', 'BeaufortforLOL', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  border: 1px solid var(--gold-five);
+  justify-content: flex-start;
+}
+
+/* Sección del campeón */
+.championSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+.championHeader{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+.masteryIcon {
+  width: 45px;
+  height: 45px;
+  border: 3px solid rgb(10, 50, 60);
+  border-radius: 50%;
+  background-color: rgb(1, 10, 19);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+
+.masteryLevel {
+  color: white!important;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+
+.championInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.championName {
+  color: var(--gold-one);
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.separator {
+  height: 1px;
+  /*background: linear-gradient(90deg, #c89b3c 0%, #c89b3c 100%);*/
+  background: var(--gold-five);
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.masteryPoints {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  font-size: 14px;
+  color: #a09b8c;
+  margin-bottom: 0.5vh;
+}
+
+.wingIcon {
+  color: var(--color-primary);
+  font-size: 0.9rem;
+  margin-right: 5px;
+}
+
+.seasonRating {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  font-size: 12px;
+  color: #re;
+}
+
+.ratingValue {
+  color: #a09b8c;
+  font-style: italic;
+}
+
+/* Sección INICIO */
+.startSection {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+}
+
+.sectionTitle {
+  color: var(--gold-two);
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.startButton {
+  width: 26px;
+  height: 26px;
+  border: 1px solid slategray;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a1c21;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+.freePlay {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #a09b8c;
+}
+
+.hexagonIcon {
+  width: 18px;
+  height: 18px;
+  background-color: #0ac8b9;
+  color: white;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Sección PROGRESIÓN DE ETERNOS */
+.eternalsSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.eternalsTitle {
+  color: var(--gold-two);
+  font-size: 0.75rem;
+  font-weight: bold;
+
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.eternalsList {
+  display: flex;
+  flex-direction: column;
+}
+
+.eternalItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.6rem;
+  color: #a09b8c;
+  line-height: 1.3;
+}
+
+.lockIcon {
+  color: #a09b8c;
+  font-size: 12px;
+}
