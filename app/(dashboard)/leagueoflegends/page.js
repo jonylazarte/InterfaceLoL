@@ -6,11 +6,12 @@ export default function Dashboard(){
   
 
     return (
-        <div>
+        <section>
           
-        </div>
+        </section>
 
           
 
     )
 }
+
