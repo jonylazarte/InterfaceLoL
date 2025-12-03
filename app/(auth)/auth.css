@@ -1,0 +1,164 @@
+.main-menu{
+	height: 100vh;
+	width: 100vw;
+	background-image: url("/poke-group.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position-y: -100px;
+	background-attachment: fixed;
+	display: flex;
+	align-items: flex-start;
+	align-content: flex-start;
+	justify-content: flex-start;
+}
+.riot-games-logo {
+	width: 110px;
+	margin-bottom: 10vh;
+}
+.main-menu.register {
+	background-image: url("/riot_desktop_background_2x.jpg");
+	justify-content: flex-end;
+}
+.error-box{
+	width: 50%;
+	height: auto;
+	color: rgb(190, 41, 204);
+	line-height: 1.1;
+	text-align: center;
+}
+.form-interface {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	align-items: center;
+}
+.login-form{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+	justify-content: flex-start;
+	width: 35%;
+	height: 100%;
+	margin: 0!important;
+	background-color: #fafafa;
+	color: black;
+	padding-top: 10vh;
+}
+.login-form .input-div{
+	display: flex;
+	flex-direction: column;
+	border: 0px solid dimgray;
+	font-size: 15px;
+	background-color: rgba(235, 235, 235, 1.0);
+	width: 50%!important;
+	height: 50px;
+	margin: 5px;
+	border-radius: 3px;
+	padding-left: 15px;
+	margin-top: 10px;
+	transition: background 0.1s;
+	//color: rgb(10, 10, 10);
+	color: dimgray;
+	//letter-spacing: 0.08em;
+	font-family: "FF Mark W05", sans-serif;
+}
+.login-form .input-div:hover{
+	background-color: rgba(225, 225, 225, 1.0);
+}
+.login-form .input-div:focus{
+	background-color: #fafafa;
+	border: 2px solid dimgray;
+}
+.login-form .input-div::placeholder{
+	color: rgb(110, 110, 110);
+	text-transform: uppercase;
+	font-size: 10px;
+	font-weight: 900;
+}
+.login-form .input-div.errorMessage{
+	background-color: rgba(248, 233, 253, 1.0);
+}
+.login-form .input-div.errorMessage::placeholder{
+	color: rgba(190, 41, 204, 1.0);
+}
+.login-form .input-div.errorMessage:hover{
+	background-color: rgba(241, 212, 250, 1.0);
+}
+.login-form .input-div.errorMessage:focus{
+	border: 2px solid rgba(241, 212, 250, 1.0);
+	background-color: #fafafa;
+}
+.login-form input{
+	height: 35px;
+	background-color: rgba(0, 0, 0, 0);
+	border: 1px solid graylight;
+	font-size: 14px;
+}
+.login-form h2{
+	font-size: 1.3rem;
+	text-align: center;
+	margin-bottom: 10px;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+.inputError{
+	width: 48%;
+	color: darkviolet;
+}
+.actions-box{
+	display: flex;
+	flex-direction: column;
+	margin-top: 18vh;
+	justify-content: space-between;
+	align-items: center;
+	color: rgb(74, 74, 74);
+	font-weight: 900;
+	font-size: 10px;
+	text-transform: uppercase;
+
+}
+.actions-box a{
+	text-decoration: none;
+	cursor: pointer;
+	color: rgb(75,75,75);
+	font-size: 0.65rem;
+}
+.login-button{
+	color: white;
+	background-color: #d53235;
+	border: 0;
+	height: 60px;
+	width: 62px;
+	font-size: 23px;
+	cursor: pointer;
+	margin-top: 10px;
+	border-radius: 20px;
+	margin-bottom: 5vh;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	display: flex;
+}
+.login-button:hover{
+	background-color: #b62c2e;
+}
+.login-button.disabled{
+	background-color: #fafafa;
+	border: 1px solid lightgray;
+	color: gray;
+	cursor: not-allowed;
+}
+.login-button.disabled:hover{
+	background-color: #fafafa;
+	border: 1px solid lightgray;
+}
+
+
+@media /*(min-width: 768px) and */(max-width: 1024px) {
+  /* Estilos específicos para tablets */
+  .login-form{
+  	width: 100%!important;
+  }
+
+}
