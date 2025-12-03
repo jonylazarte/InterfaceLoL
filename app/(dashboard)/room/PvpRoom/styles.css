@@ -1,0 +1,141 @@
+.pvp-room{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	height: var(--dashboard-content-height);
+	width: 100%;
+	padding-bottom: 2vh;
+	overflow: hidden;
+}
+.room-header{
+	position: absolute;
+	top: 0;
+	padding-top: 20px;
+	height: 100px;
+	width: 100%;
+	padding-left: 30px;
+	color: var(--gold-one);
+	display: flex;
+	align-items: flex-start;
+	background: linear-gradient(to bottom, black, transparent);
+	overflow: hidden;
+	white-space: nowrap;
+	font-family: Medium;
+	z-index: 1;
+}
+.header-arrow{
+	display: flex;
+	font-size: 30px;
+	width: 80px;
+	border-right: 1px solid gray;
+	margin-right: 30px;
+	color: var(--gold-five);
+	cursor: pointer;
+}
+.header-arrow:hover{
+	color: var(--gold-two);
+}
+.room-header img{
+	width: 30px;
+	opacity: 0.8;
+	margin-right: 15px;
+}
+.room-users{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	height: 85%;
+	width: 90%;
+}
+
+.room-user{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+	text-align: center;
+	width: 250px;
+}
+.user-banner{
+	width: 210px;
+	height: 95%;
+	position: relative;
+}
+.user-banner-info-container{
+	position: absolute;
+	bottom: 50%;
+	color: var(--gold-one);
+	font-family: Bold;
+}
+.banner-user-name {
+	font-size: 1.1rem;
+}
+.banner-user-icon{
+	position: relative;
+	width: 195px;
+	display: flex;
+	justify-content: center;
+}
+.banner-user-icon-img{
+	z-index: 0;
+	position: absolute;
+	height: 90px;
+	left: 52px;
+	bottom: 41px;
+	border-radius: 40px;
+}
+.banner-user-border{
+	height: 160px;
+	width: 170px;
+	z-index: 1;
+}
+
+
+
+@media (max-width: 767px) {
+	.pvp-room{
+		height: var(--dashboard-content-height-mobile);
+	}
+	.room-header{
+		font-size: 12px;
+		padding-left: 10px;
+		padding-top: 1vh;
+	}
+	.room-header h3{
+		margin-top: 1%;
+		font-size: 0.65rem;
+		width: 90%;
+	}
+	.header-arrow{
+		margin-right: 10px;
+		width: 40px;
+		font-size: 15px;
+		margin-top: 3px;
+	}
+	.room-header img{
+		width: 15px;
+		margin-top: 0.5vh;
+	}
+	.user-banner{
+		width: 160px;
+	}
+	.user-banner-info-container{
+		top: 20%;
+	}
+	.banner-user-icon{
+		position: relative;
+		width: 195px;
+		scale: 0.7;
+		display: flex;
+		justify-content: center;
+	}
+	.room-user h2{
+		font-size: 0.8rem;
+		line-height: 1;
+	}
+	.room-user span {
+		font-size: 0.75rem;
+	}
+}
